@@ -192,7 +192,7 @@ fn extract_square_coordinates(event: MouseEvent) -> Option<(i32, i32)> {
     let target = event.target()?.dyn_into::<web_sys::Element>().ok()?;
     let coordinates: Vec<String> = target
         .get_attribute("id")?
-        .split("_")
+        .split('_')
         .map(|s| s.to_string())
         .collect();
 
